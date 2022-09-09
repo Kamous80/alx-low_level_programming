@@ -1,2 +1,2 @@
 #!/bin/bash
-objdump -d $file -M intel
+gcc -S -masm=intel $CFILE
