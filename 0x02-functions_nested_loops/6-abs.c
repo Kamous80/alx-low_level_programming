@@ -1,8 +1,3 @@
-/*
- * File: 6-abs.c
- * 
- */
-
 #include "main.h"
 
 /**
