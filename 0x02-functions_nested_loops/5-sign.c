@@ -1,8 +1,3 @@
-/*
- * File: 5-sign.c
- * 
- */
-
 #include "main.h"
 
 /**
