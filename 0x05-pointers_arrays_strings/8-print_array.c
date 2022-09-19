@@ -9,14 +9,15 @@
  */
 void print_array(int *a, int n)
 {
-	int i = 0;
+	int inc;
 
-	while (i < n)
+	int inc;
+	for (inc = 0; inc < n; inc++)
 	{
-		printf("%d", a[i]);
-		if (i < (n - 1))
-			printf(", ");
-		i++;
+		if (inc != n - 1)
+			printf("%d, ", a[inc]);
+		else
+			printf("%d", a[inc]);
 	}
-	printf("\n");
+	putchar(10);
 }
