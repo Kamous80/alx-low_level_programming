@@ -28,7 +28,7 @@ k = j / 2;
 	
 for (; k < j; k++)
 {
-putchar(str[k]);
+_putchar(str[k]);
 }
-putchar('\n');
+_putchar('\n');
 }
