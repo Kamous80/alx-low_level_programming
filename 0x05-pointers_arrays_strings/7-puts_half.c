@@ -30,6 +30,5 @@ for (; k < j; k++)
 {
 putchar(str[k]);
 }
-
 putchar(10);
 }
