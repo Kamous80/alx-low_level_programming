@@ -9,10 +9,13 @@ int check_palindrome(char *s);
  */
 int is_palindrome(char *s)
 {
-	if (*s == '0')
+	int index = 0;
+	int len = find_strlen(s);
+
+	if (!(*s))
 		return (1);
 
-	return (check_palindrome(s));
+	return (check_palindrome(s, len, index));
 }
 
 /**
