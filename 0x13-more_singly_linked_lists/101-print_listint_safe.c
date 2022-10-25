@@ -1,23 +1,44 @@
 #include "lists.h"
 
 /**
- * reverse_listint - prints a listint_t linked list.
- * @head: pointer to the list.
- * Return: number of nodes in the list.
+ * print_listint_safe - prints a linked list
+ * @head: head of list
+ * Return: number of nodes
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t pichu = 0;
-	const listint_t *aux_node = head;
+	size_t n = 0, i = 0;
+	const listint_t *loop;
+	const listint_t *h;
 
-	if (!head)
-		exit(98);
-
-	while (aux_node)
+	h = head;
+	loop = head;
+	while (head)
 	{
-		printf("[%p] %i\n", (void *)aux_node, aux_node->n);
-		aux_node = aux_node->next;
-		pichu++;
+		printf("[%p] %d\n", (void *) head, head->n);
+		if (head == head->next)
+		{
+			printf("-> [%p] %d\n", (void *) head, head->n);
+			n++;
+			break;
+		}
+		head = head->next;
+		while (i < n && loop)
+		{
+			if (head == loop)
+			{
+				printf("-> [%p] %d\n", (void *) head, head->n);
+				if (head != head->next)
+					n++;
+				return (n);
+			}
+			loop = loop->next;
+			i++;
+		}
+		loop = h;
+		i = 0;
+		n++;
 	}
-	return (pichu);
+	return (n);
 }
+
